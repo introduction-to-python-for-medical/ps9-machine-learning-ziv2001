@@ -1,11 +1,9 @@
 import pandas as pd
 df = pd.read_csv('parkinsons.csv')
-               #df.head()
 df = df.dropna()
 
 features = ['PPE', 'DFA'] 
 target = 'status'
-                        #target = ['status']
 x = df[features]
 y = df[target]
 

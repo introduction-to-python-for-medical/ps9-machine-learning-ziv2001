@@ -1,10 +1,11 @@
 import pandas as pd
 df = pd.read_csv('parkinsons.csv')
-df.head()
+               #df.head()
 df = df.dropna()
 
 features = ['PPE', 'DFA'] 
-target = ['status']
+target = 'status'
+                        #target = ['status']
 x = df[features]
 y = df[target]
 
@@ -22,4 +23,4 @@ model.fit(x_train, y_train)
 from sklearn.metrics import accuracy_score
 y_pred = model.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy}")
+print(accuracy)
